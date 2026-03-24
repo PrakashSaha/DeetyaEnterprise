@@ -17,9 +17,9 @@ export default function Footer() {
             <div className="flex flex-wrap items-center gap-4">
               <a href="#" className="w-11 h-11 rounded-full bg-indigo-50 flex items-center justify-center text-indigo-600 transition-all duration-300 hover:bg-indigo-600 hover:text-white hover:-translate-y-1 shadow-sm"><MessageCircle size={20} /></a>
               <a href="#" className="w-11 h-11 rounded-full bg-indigo-50 flex items-center justify-center text-indigo-600 transition-all duration-300 hover:bg-indigo-600 hover:text-white hover:-translate-y-1 shadow-sm"><Mail size={20} /></a>
-              <a href="#" className="w-11 h-11 rounded-full bg-indigo-50 flex items-center justify-center text-indigo-600 transition-all duration-300 hover:bg-indigo-600 hover:text-white hover:-translate-y-1 shadow-sm"><Linkedin size={20} /></a>
-              <a href="#" className="w-11 h-11 rounded-full bg-indigo-50 flex items-center justify-center text-indigo-600 transition-all duration-300 hover:bg-indigo-600 hover:text-white hover:-translate-y-1 shadow-sm"><Twitter size={20} /></a>
-              <a href="#" className="w-11 h-11 rounded-full bg-indigo-50 flex items-center justify-center text-indigo-600 transition-all duration-300 hover:bg-indigo-600 hover:text-white hover:-translate-y-1 shadow-sm"><Github size={20} /></a>
+              <a href="#" className="w-11 h-11 rounded-full bg-indigo-50 flex items-center justify-center text-indigo-600 transition-all duration-300 hover:bg-indigo-600 hover:text-white hover:-translate-y-1 shadow-sm"><Globe size={20} /></a>
+              <a href="#" className="w-11 h-11 rounded-full bg-indigo-50 flex items-center justify-center text-indigo-600 transition-all duration-300 hover:bg-indigo-600 hover:text-white hover:-translate-y-1 shadow-sm"><Share2 size={20} /></a>
+              <a href="#" className="w-11 h-11 rounded-full bg-indigo-50 flex items-center justify-center text-indigo-600 transition-all duration-300 hover:bg-indigo-600 hover:text-white hover:-translate-y-1 shadow-sm"><Info size={20} /></a>
             </div>
           </div>
 

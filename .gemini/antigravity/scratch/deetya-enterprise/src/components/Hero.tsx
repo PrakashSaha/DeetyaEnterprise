@@ -14,9 +14,9 @@ export default function Hero() {
       <section className="min-h-[95vh] flex items-center justify-center pt-40 pb-28 px-6 md:px-12 lg:px-24 relative overflow-hidden text-center" id="hero">
       {/* Aurora glows */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
-        <div className="absolute -top-[20%] -left-[10%] w-[120vw] h-[120vw] bg-[radial-gradient(ellipse,rgba(99,102,241,0.14)_0%,transparent_65%)] animate-drift1" />
-        <div className="absolute inset-x-0 bottom-[20%] -right-[10%] w-[100vw] h-[100vw] bg-[radial-gradient(ellipse,rgba(139,92,246,0.12)_0%,transparent_65%)] animate-drift2" />
-        <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(rgba(99,102,241,0.1)_1px,transparent_1px)] bg-[length:36px_36px] [mask-image:radial-gradient(ellipse_80%_80%_at_50%_50%,black_20%,transparent_100%)]" />
+        <div className="absolute -top-[20%] -left-[10%] w-screen h-[120vw] bg-[radial-gradient(ellipse,rgba(99,102,241,0.14)_0%,transparent_65%)] animate-drift1" />
+        <div className="absolute inset-x-0 bottom-[20%] -right-[10%] w-screen h-screen bg-[radial-gradient(ellipse,rgba(139,92,246,0.12)_0%,transparent_65%)] animate-drift2" />
+        <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(rgba(99,102,241,0.1)_1px,transparent_1px)] bg-size-[36px_36px] mask-[radial-gradient(ellipse_80%_80%_at_50%_50%,black_20%,transparent_100%)]" />
       </div>
       
       {/* Neural network animation */}
