@@ -51,7 +51,7 @@ export default function Testimonials() {
           {/* Left Column: Testimonials */}
           <div className="space-y-8">
             <div className="max-w-2xl mx-auto lg:mx-0">
-              <div className="bg-white rounded-[2rem] p-10 md:p-14 shadow-[0_20px_50px_rgba(99,102,241,0.05)] border border-indigo-50 relative transition-all duration-500 hover:shadow-[0_30px_60px_rgba(99,102,241,0.1)] fade-up" style={{ opacity: visible ? 1 : 0, transform: visible ? 'translateY(0)' : 'translateY(15px)', transition: 'all .4s ease-out' }}>
+              <div className="bg-white rounded-4xl p-10 md:p-14 shadow-[0_20px_50px_rgba(99,102,241,0.05)] border border-indigo-50 relative transition-all duration-500 hover:shadow-[0_30px_60px_rgba(99,102,241,0.1)] fade-up" style={{ opacity: visible ? 1 : 0, transform: visible ? 'translateY(0)' : 'translateY(15px)', transition: 'all .4s ease-out' }}>
                 <Quote size={48} className="text-indigo-100 mb-8" />
                 <p className="text-xl md:text-2xl leading-relaxed text-gray-700 font-medium mb-10 italic tracking-tight">&quot;{t.quote}&quot;</p>
                 <div className="flex items-center gap-6 border-t border-indigo-50 pt-8 mt-4">
@@ -80,12 +80,12 @@ export default function Testimonials() {
               <form className="flex flex-col gap-6" onSubmit={e => e.preventDefault()}>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   {/* Name Input */}
-                  <div className="flex items-center gap-4 bg-gray-50/80 border border-indigo-50 rounded-2xl px-5 py-4 transition-all duration-300 focus-within:bg-white focus-within:border-indigo-400 focus-within:ring-4 focus-within:ring-indigo-500/5 group">
+                  <div className="flex items-center gap-4 bg-gray-50/80 border border-indigo-100 rounded-2xl px-5 py-4 transition-all duration-300 focus-within:bg-white focus-within:border-indigo-400 focus-within:ring-4 focus-within:ring-indigo-500/5 group">
                     <User className="text-gray-400 transition-colors group-focus-within:text-indigo-600 shrink-0" size={20} />
                     <input type="text" placeholder="Your Name" required className="w-full bg-transparent border-none outline-none font-bold text-gray-900 placeholder:text-gray-400 focus:ring-0 p-0 text-base" />
                   </div>
                   {/* Country Input */}
-                  <div className="flex items-center gap-4 bg-gray-50/80 border border-indigo-50 rounded-2xl px-5 py-4 transition-all duration-300 focus-within:bg-white focus-within:border-indigo-400 focus-within:ring-4 focus-within:ring-indigo-500/5 group">
+                  <div className="flex items-center gap-4 bg-gray-50/80 border border-indigo-100 rounded-2xl px-5 py-4 transition-all duration-300 focus-within:bg-white focus-within:border-indigo-400 focus-within:ring-4 focus-within:ring-indigo-500/5 group">
                     <Globe className="text-gray-400 transition-colors group-focus-within:text-indigo-600 shrink-0" size={20} />
                     <input type="text" placeholder="Country" required className="w-full bg-transparent border-none outline-none font-bold text-gray-900 placeholder:text-gray-400 focus:ring-0 p-0 text-base" />
                   </div>
@@ -93,25 +93,25 @@ export default function Testimonials() {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   {/* Phone Input */}
-                  <div className="flex items-center gap-4 bg-gray-50/80 border border-indigo-50 rounded-2xl px-5 py-4 transition-all duration-300 focus-within:bg-white focus-within:border-indigo-400 focus-within:ring-4 focus-within:ring-indigo-500/5 group">
+                  <div className="flex items-center gap-4 bg-gray-50/80 border border-indigo-100 rounded-2xl px-5 py-4 transition-all duration-300 focus-within:bg-white focus-within:border-indigo-400 focus-within:ring-4 focus-within:ring-indigo-500/5 group">
                     <Phone className="text-gray-400 transition-colors group-focus-within:text-indigo-600 shrink-0" size={20} />
                     <input type="text" placeholder="Phone Number" required className="w-full bg-transparent border-none outline-none font-bold text-gray-900 placeholder:text-gray-400 focus:ring-0 p-0 text-base" />
                   </div>
                   {/* Email Input */}
-                  <div className="flex items-center gap-4 bg-gray-50/80 border border-indigo-50 rounded-2xl px-5 py-4 transition-all duration-300 focus-within:bg-white focus-within:border-indigo-400 focus-within:ring-4 focus-within:ring-indigo-500/5 group">
+                  <div className="flex items-center gap-4 bg-gray-50/80 border border-indigo-100 rounded-2xl px-5 py-4 transition-all duration-300 focus-within:bg-white focus-within:border-indigo-400 focus-within:ring-4 focus-within:ring-indigo-500/5 group">
                     <Mail className="text-gray-400 transition-colors group-focus-within:text-indigo-600 shrink-0" size={20} />
                     <input type="email" placeholder="Email Id" required className="w-full bg-transparent border-none outline-none font-bold text-gray-900 placeholder:text-gray-400 focus:ring-0 p-0 text-base" />
                   </div>
                 </div>
 
                 {/* Company Input */}
-                <div className="flex items-center gap-4 bg-gray-50/80 border border-indigo-50 rounded-2xl px-5 py-4 transition-all duration-300 focus-within:bg-white focus-within:border-indigo-400 focus-within:ring-4 focus-within:ring-indigo-500/5 group">
+                <div className="flex items-center gap-4 bg-gray-50/80 border border-indigo-100 rounded-2xl px-5 py-4 transition-all duration-300 focus-within:bg-white focus-within:border-indigo-400 focus-within:ring-4 focus-within:ring-indigo-500/5 group">
                   <Building className="text-gray-400 transition-colors group-focus-within:text-indigo-600 shrink-0" size={20} />
                   <input type="text" placeholder="Company Name" required className="w-full bg-transparent border-none outline-none font-bold text-gray-900 placeholder:text-gray-400 focus:ring-0 p-0 text-base" />
                 </div>
 
                 {/* Requirements Textarea */}
-                <div className="bg-gray-50/80 border border-indigo-50 rounded-2xl px-5 py-5 transition-all duration-300 focus-within:bg-white focus-within:border-indigo-400 focus-within:ring-4 focus-within:ring-indigo-500/5">
+                <div className="bg-gray-50/80 border border-indigo-100 rounded-2xl px-5 py-5 transition-all duration-300 focus-within:bg-white focus-within:border-indigo-400 focus-within:ring-4 focus-within:ring-indigo-500/5">
                   <textarea placeholder="Tell us about your requirements..." required rows={4} className="w-full bg-transparent border-none outline-none font-bold text-gray-900 placeholder:text-gray-400 focus:ring-0 p-0 text-base resize-none" />
                 </div>
                 
@@ -121,10 +121,10 @@ export default function Testimonials() {
                       <Paperclip size={18} /> Attach Files
                     </label>
                     <input id="file-upload" type="file" className="hidden" />
-                    <span className="text-xs font-semibold text-gray-400">Max size: 10MB</span>
+                    <span className="text-xs font-bold text-gray-400 uppercase tracking-widest">Max 10MB</span>
                   </div>
-                  <button type="submit" className="bg-linear-to-r from-indigo-600 to-purple-600 text-white py-3 px-8 rounded-full font-bold text-base transition-all duration-300 hover:scale-105 hover:shadow-lg shadow-indigo-500/30 w-full sm:w-auto">
-                    Send Message →
+                  <button type="submit" className="w-full sm:w-auto bg-linear-to-r from-indigo-600 to-purple-600 text-white py-4 px-10 rounded-full font-black text-lg transition-all duration-300 shadow-2xl shadow-indigo-500/40 hover:scale-105 hover:-translate-y-1 active:scale-95">
+                    Start Project →
                   </button>
                 </div>
               </form>

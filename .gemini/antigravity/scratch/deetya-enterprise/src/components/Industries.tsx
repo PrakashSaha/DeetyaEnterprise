@@ -27,19 +27,16 @@ export default function Industries() {
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8">
           {industries.map((ind, i) => (
-            <div key={i} className={`bg-white border border-indigo-100/50 rounded-3xl p-8 text-left transition-all duration-300 relative overflow-hidden group hover:-translate-y-2 hover:shadow-2xl hover:shadow-indigo-500/10 hover:border-indigo-300 fade-up d${i + 1}`}>
-              <div className="absolute inset-0 bg-linear-to-br from-indigo-50/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
-              <div className="relative z-10 flex items-center gap-4 mb-6">
-                <div className="flex items-center justify-center w-14 h-14 bg-indigo-50/50 rounded-2xl border border-indigo-100 shrink-0 shadow-sm group-hover:scale-110 transition-transform duration-300" style={{ background: ind.bg, borderColor: `${ind.color}33` }}>
-                  <ind.Icon size={28} color={ind.color} strokeWidth={2} />
-                </div>
-                <div className="text-xl font-extrabold tracking-tight text-gray-900">{ind.name}</div>
+            <div key={i} className={`bg-white border border-indigo-50 rounded-3xl p-8 transition-all duration-500 fade-up d${(i % 4) + 1} hover:shadow-[0_20px_50px_rgba(99,102,241,0.08)] hover:-translate-y-2 group`}>
+              <div className="w-16 h-16 bg-indigo-50 rounded-2xl flex items-center justify-center mb-6 text-indigo-600 transition-colors group-hover:bg-indigo-600 group-hover:text-white group-hover:scale-110 duration-300">
+                <ind.Icon size={32} />
               </div>
-              <ul className="relative z-10 list-none p-0 m-0 flex flex-col gap-3">
+              <h3 className="text-xl font-black mb-4 text-gray-900 tracking-tight">{ind.name}</h3>
+              <ul className="space-y-3">
                 {ind.items.map((item, j) => (
-                  <li key={j} className="text-sm md:text-base text-gray-500 font-medium leading-relaxed flex items-start gap-3">
-                    <span className="text-indigo-500 font-black text-lg leading-none mt-0.5">•</span>
-                    <span>{item}</span>
+                  <li key={j} className="flex items-center gap-3 text-gray-500 font-bold text-sm">
+                    <span className="w-1.5 h-1.5 rounded-full bg-indigo-400 group-hover:bg-indigo-600 transition-colors" />
+                    {item}
                   </li>
                 ))}
               </ul>

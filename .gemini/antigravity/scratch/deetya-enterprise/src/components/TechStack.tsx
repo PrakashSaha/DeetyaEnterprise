@@ -1,11 +1,11 @@
 'use client';
 import { useState, useEffect, useRef } from 'react';
-
 import { tabs } from '../utils/constants';
 
 export default function TechStack() {
-  const [active, setActive] = useState('ai');
+  const [activeTab, setActiveTab] = useState(tabs[0].id);
   const ref = useRef<HTMLElement>(null);
+
   useEffect(() => {
     const obs = new IntersectionObserver(entries => {
       entries.forEach(e => { if (e.isIntersecting) e.target.querySelectorAll('.fade-up').forEach(el => el.classList.add('visible')); });
@@ -14,7 +14,6 @@ export default function TechStack() {
     return () => obs.disconnect();
   }, []);
 
-  const current = tabs.find(t => t.id === active)!;
   return (
     <section id="stack" className="py-24 md:py-32 px-6 md:px-12 bg-indigo-50/40" ref={ref}>
       <div className="max-w-7xl mx-auto">
@@ -29,14 +28,17 @@ export default function TechStack() {
         </div>
         <div className="flex gap-3 flex-wrap justify-center mt-10 mb-10">
           {tabs.map(t => (
-            <button key={t.id} className={`py-2.5 px-6 rounded-full text-sm font-bold cursor-pointer border border-indigo-200/50 bg-white/80 text-gray-600 transition-all duration-300 tracking-wide backdrop-blur-md shadow-sm hover:shadow-md ${active === t.id ? 'bg-linear-to-r from-indigo-600 to-purple-600 border-transparent! text-white! shadow-indigo-500/30 scale-105' : 'hover:border-indigo-400 hover:text-indigo-600 hover:bg-indigo-50'}`} onClick={() => setActive(t.id)}>
+            <button key={t.id} className={`px-8 py-3 rounded-full font-black text-sm tracking-widest uppercase transition-all duration-300 border-2 ${activeTab === t.id ? 'bg-indigo-600 text-white border-indigo-600 shadow-xl shadow-indigo-500/40' : 'bg-white text-gray-500 border-indigo-50 hover:border-indigo-200'}`} onClick={() => setActiveTab(t.id)}>
               {t.label}
             </button>
           ))}
         </div>
-        <div className="flex flex-wrap justify-center gap-4 py-4">
-          {current.techs.map(tech => (
-            <span key={tech} className="flex items-center gap-2 py-3 px-6 rounded-full bg-white border border-indigo-100 text-sm font-bold text-gray-800 transition-all duration-300 shadow-sm hover:border-indigo-400 hover:bg-indigo-50 hover:-translate-y-1 hover:shadow-md hover:shadow-indigo-500/10 hover:text-indigo-700">⚙️ {tech}</span>
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 md:gap-8 min-h-[160px] content-start">
+          {tabs.find(t => t.id === activeTab)?.items.map((item, i) => (
+            <div key={item} className="bg-white p-6 rounded-3xl border border-indigo-50 flex flex-col items-center justify-center transition-all duration-500 hover:shadow-2xl hover:shadow-indigo-500/10 hover:-translate-y-2 fade-up" style={{ transitionDelay: `${i * 0.05}s` }}>
+              <div className="w-12 h-12 bg-indigo-50 rounded-2xl flex items-center justify-center mb-4 text-indigo-600 font-bold text-sm">{item[0]}</div>
+              <div className="text-sm font-black text-gray-900 tracking-tight text-center">{item}</div>
+            </div>
           ))}
         </div>
       </div>

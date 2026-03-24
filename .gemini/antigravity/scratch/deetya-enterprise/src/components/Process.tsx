@@ -1,6 +1,5 @@
 'use client';
 import { useEffect, useRef } from 'react';
-
 import { steps } from '../utils/constants';
 
 export default function Process() {
