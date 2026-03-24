@@ -13,7 +13,7 @@ export default function Process() {
   }, []);
 
   return (
-    <section id="process" className="py-24 md:py-32 px-6 md:px-12 bg-white relative overflow-hidden" ref={ref}>
+    <section id="process" className="py-24 md:py-32 px-6 md:px-12 bg-white relative overflow-hidden scroll-mt-32" ref={ref}>
       <div className="max-w-7xl mx-auto relative z-10">
         
         <div className="flex flex-col lg:flex-row justify-between items-center mb-20 md:mb-24 gap-12 fade-up text-center lg:text-left translate-y-0 opacity-100 transition-all duration-700">

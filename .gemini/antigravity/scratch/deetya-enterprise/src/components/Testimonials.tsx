@@ -36,7 +36,7 @@ export default function Testimonials() {
   const t = testimonials[cur];
 
   return (
-    <section id="testimonials" className="py-24 md:py-32 px-6 md:px-12 bg-indigo-50/40 relative overflow-hidden" ref={ref}>
+    <section id="testimonials" className="py-24 md:py-32 px-6 md:px-12 bg-indigo-50/40 relative overflow-hidden scroll-mt-32" ref={ref}>
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(99,102,241,0.05),transparent_40%)] pointer-events-none" />
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="flex flex-col items-center gap-6 mb-20 md:mb-24 fade-up text-center">

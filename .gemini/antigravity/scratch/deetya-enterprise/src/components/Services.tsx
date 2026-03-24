@@ -13,7 +13,7 @@ export default function Services() {
   }, []);
 
   return (
-    <section id="services" className="py-24 md:py-32 px-6 md:px-12 bg-white" ref={ref}>
+    <section id="services" className="py-24 md:py-32 px-6 md:px-12 bg-white scroll-mt-32" ref={ref}>
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col items-center gap-6 mb-20 md:mb-24 fade-up text-center">
           <span className="block mx-auto w-fit border border-indigo-200/50 text-indigo-700 py-2 px-6 rounded-full text-xs font-bold tracking-widest uppercase shadow-md shadow-indigo-500/5 bg-indigo-50/50">

@@ -37,7 +37,7 @@ export default function Stats() {
   }, []);
 
   return (
-    <section id="stats" className="py-24 md:py-32 px-6 md:px-12 bg-white relative" ref={ref}>
+    <section id="stats" className="py-24 md:py-32 px-6 md:px-12 bg-white relative scroll-mt-24" ref={ref}>
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10">
           {stats.map((s, i) => (

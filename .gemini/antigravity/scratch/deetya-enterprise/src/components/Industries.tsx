@@ -13,7 +13,7 @@ export default function Industries() {
   }, []);
 
   return (
-    <section id="industries" className="py-24 md:py-32 px-6 md:px-12 bg-white relative overflow-hidden" ref={ref}>
+    <section id="industries" className="py-24 md:py-32 px-6 md:px-12 bg-white relative overflow-hidden scroll-mt-32" ref={ref}>
       <div className="absolute inset-0 bg-linear-to-t from-indigo-50/50 to-transparent pointer-events-none" />
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="flex flex-col items-center gap-6 mb-20 md:mb-24 fade-up text-center">
