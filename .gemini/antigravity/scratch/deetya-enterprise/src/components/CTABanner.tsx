@@ -1,6 +1,6 @@
 'use client';
 import { useEffect, useRef } from 'react';
-import { Mail, Phone, MessageCircle, ExternalLink } from 'lucide-react';
+import { Mail, Calendar } from 'lucide-react';
 
 export default function CTABanner() {
   const ref = useRef<HTMLElement>(null);
@@ -13,23 +13,41 @@ export default function CTABanner() {
   }, []);
 
   return (
-    <section id="cta" className="bg-linear-to-r from-indigo-700 via-indigo-600 to-purple-800 relative overflow-hidden text-center py-24 px-6 md:py-32 md:px-12" ref={ref}>
-      <div className="absolute inset-0 bg-[radial-gradient(rgba(255,255,255,0.15)_1px,transparent_1px)] bg-size-[32px_32px] pointer-events-none opacity-50" />
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-size-[64px_64px] pointer-events-none" />
-      <div className="relative z-10 fade-up max-w-4xl mx-auto">
-        <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6 tracking-tight drop-shadow-md">Ready to Build Something Extraordinary?</h2>
-        <p className="text-indigo-100/90 text-lg md:text-xl font-medium leading-relaxed max-w-2xl mx-auto mb-10">Tell us about your project. We&apos;ll respond within 24 hours with a clear plan — no sales pitch, just solutions.</p>
-        <div className="flex gap-4 justify-center flex-wrap mb-10">
-          <a href="mailto:hello@deetyaenterprise.com" className="bg-white text-indigo-700 py-4 px-8 rounded-full font-black text-lg transition-all duration-300 inline-flex items-center gap-3 tracking-tight shadow-xl shadow-cyan-900/20 hover:-translate-y-1 hover:scale-105 hover:shadow-2xl">
-            <Mail size={20} /> Email Us
-          </a>
-          <a href="#" className="border-2 border-white/40 text-white py-4 px-8 rounded-full font-bold text-lg transition-all duration-300 inline-flex items-center gap-3 backdrop-blur-md bg-white/5 hover:bg-white/20 hover:border-white hover:-translate-y-1">Book a Free Call</a>
-        </div>
-        <div className="flex gap-4 md:gap-6 justify-center flex-wrap">
-          <a href="#" className="flex items-center gap-2.5 bg-white/10 border border-white/20 text-white py-2.5 px-6 rounded-full text-sm font-bold transition-all duration-300 backdrop-blur-md hover:bg-white/20 hover:border-white/40 hover:-translate-y-1"><MessageCircle size={18} /> WhatsApp</a>
-          <a href="mailto:hello@deetyaenterprise.com" className="flex items-center gap-2.5 bg-white/10 border border-white/20 text-white py-2.5 px-6 rounded-full text-sm font-bold transition-all duration-300 backdrop-blur-md hover:bg-white/20 hover:border-white/40 hover:-translate-y-1"><Mail size={18} /> Email</a>
-          <a href="#" className="flex items-center gap-2.5 bg-white/10 border border-white/20 text-white py-2.5 px-6 rounded-full text-sm font-bold transition-all duration-300 backdrop-blur-md hover:bg-white/20 hover:border-white/40 hover:-translate-y-1"><ExternalLink size={18} /> LinkedIn</a>
-          <a href="#" className="flex items-center gap-2.5 bg-white/10 border border-white/20 text-white py-2.5 px-6 rounded-full text-sm font-bold transition-all duration-300 backdrop-blur-md hover:bg-white/20 hover:border-white/40 hover:-translate-y-1"><Phone size={18} /> Call</a>
+    <section id="cta" className="py-24 md:py-32 px-6 md:px-12 bg-white relative overflow-hidden" ref={ref}>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(99,102,241,0.08),transparent_50%)] pointer-events-none" />
+      <div className="max-w-7xl mx-auto relative z-10">
+        <div className="bg-linear-to-br from-indigo-600 to-purple-700 rounded-[3rem] p-10 md:p-20 text-center text-white relative overflow-hidden shadow-2xl shadow-indigo-500/40 fade-up">
+          <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full blur-3xl -mr-32 -mt-32 pointer-events-none" />
+          <div className="max-w-4xl mx-auto relative z-10">
+            <h2 className="text-4xl md:text-5xl lg:text-7xl font-black mb-8 tracking-tighter leading-tight mt-0">
+              Ready to Build Something <br className="hidden md:block" /> Extraordinary?
+            </h2>
+            <p className="text-indigo-100 text-lg md:text-2xl mb-12 font-medium opacity-90 max-w-2xl mx-auto leading-relaxed">
+              Stop waiting for the perfect moment. Let&apos;s architect your vision with the power of modern AI.
+            </p>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-8">
+              <a href="mailto:contact@deetya.enterprise" className="flex items-center justify-center gap-4 bg-white text-indigo-700 font-black text-xl py-5 px-10 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-2xl shadow-white/20 w-full sm:w-auto">
+                <Mail size={24} /> Email Us
+              </a>
+              <a href="#" className="flex items-center justify-center gap-4 bg-indigo-500/20 text-white font-black text-xl py-5 px-10 rounded-full border-2 border-white/30 backdrop-blur-md transition-all duration-300 hover:bg-white/10 hover:border-white w-full sm:w-auto">
+                <Calendar size={24} /> Book a Free Call
+              </a>
+            </div>
+            <div className="mt-12 flex flex-wrap justify-center items-center gap-8 md:gap-14 pt-10 border-t border-white/10">
+              <div className="text-center">
+                <span className="block text-2xl md:text-3xl font-black">24h</span>
+                <span className="text-[10px] md:text-xs text-indigo-200 font-black tracking-widest uppercase mt-1">Response Time</span>
+              </div>
+              <div className="text-center">
+                <span className="block text-2xl md:text-3xl font-black">100%</span>
+                <span className="text-[10px] md:text-xs text-indigo-200 font-black tracking-widest uppercase mt-1">IP Ownership</span>
+              </div>
+              <div className="text-center">
+                <span className="block text-2xl md:text-3xl font-black">Security</span>
+                <span className="text-[10px] md:text-xs text-indigo-200 font-black tracking-widest uppercase mt-1">ISO Certified</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
