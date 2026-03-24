@@ -51,7 +51,7 @@ export default function Testimonials() {
           {/* Left Column: Testimonials */}
           <div className="space-y-8">
             <div className="max-w-2xl mx-auto lg:mx-0">
-              <div className="bg-white rounded-4xl p-10 md:p-14 shadow-[0_20px_50px_rgba(99,102,241,0.05)] border border-indigo-50 relative transition-all duration-500 hover:shadow-[0_30px_60px_rgba(99,102,241,0.1)] fade-up" style={{ opacity: visible ? 1 : 0, transform: visible ? 'translateY(0)' : 'translateY(15px)', transition: 'all .4s ease-out' }}>
+              <div className="bg-white rounded-4xl p-6 sm:p-10 md:p-14 shadow-[0_20px_50px_rgba(99,102,241,0.05)] border border-indigo-50 relative transition-all duration-500 hover:shadow-[0_30px_60px_rgba(99,102,241,0.1)] fade-up" style={{ opacity: visible ? 1 : 0, transform: visible ? 'translateY(0)' : 'translateY(15px)', transition: 'all .4s ease-out' }}>
                 <Quote size={48} className="text-indigo-100 mb-8" />
                 <p className="text-xl md:text-2xl leading-relaxed text-gray-700 font-medium mb-10 italic tracking-tight">&quot;{t.quote}&quot;</p>
                 <div className="flex items-center gap-6 border-t border-indigo-50 pt-8 mt-4">
