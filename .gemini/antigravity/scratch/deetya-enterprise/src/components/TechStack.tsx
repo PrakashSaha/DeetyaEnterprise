@@ -34,7 +34,7 @@ export default function TechStack() {
           ))}
         </div>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 md:gap-8 min-h-[160px] content-start">
-          {tabs.find(t => t.id === activeTab)?.items.map((item, i) => (
+          {tabs.find(t => t.id === activeTab)?.techs.map((item: string, i: number) => (
             <div key={item} className="bg-white p-6 rounded-3xl border border-indigo-50 flex flex-col items-center justify-center transition-all duration-500 hover:shadow-2xl hover:shadow-indigo-500/10 hover:-translate-y-2 fade-up" style={{ transitionDelay: `${i * 0.05}s` }}>
               <div className="w-12 h-12 bg-indigo-50 rounded-2xl flex items-center justify-center mb-4 text-indigo-600 font-bold text-sm">{item[0]}</div>
               <div className="text-sm font-black text-gray-900 tracking-tight text-center">{item}</div>
